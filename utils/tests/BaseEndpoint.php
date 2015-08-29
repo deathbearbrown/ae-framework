@@ -2,7 +2,7 @@
 
 abstract class BaseEndpoint extends PHPUnit_Extensions_Database_TestCase {
 
-  const API_BASE_URL = 'http://auth.dev/' . VERSION . '/';
+  const API_BASE_URL = 'http://auth.dev/test/';
 
   protected $_guzzle = null;
   static private $_pdo = null;
@@ -14,10 +14,10 @@ abstract class BaseEndpoint extends PHPUnit_Extensions_Database_TestCase {
     if (!$this->_conn) {
       if (!self::$_pdo) {
         self::$_pdo = new PDO('mysql:host=' . DB_HOST .';dbname=' .
-          DB_DATABASE , DB_USERNAME , DB_PASSWORD);
+         TEST_DB_DATABASE , DB_USERNAME , DB_PASSWORD);
       }
 
-      $this->_conn = $this->createDefaultDBConnection(self::$_pdo, DB_DATABASE);
+      $this->_conn = $this->createDefaultDBConnection(self::$_pdo, TEST_DB_DATABASE);
     }
 
     return $this->_conn;
@@ -141,10 +141,28 @@ abstract class BaseEndpoint extends PHPUnit_Extensions_Database_TestCase {
     }
   }
 
+  public function truncate(){
+    $query = 'truncate`' . $table . '`;';
+    $this->_conn->getConnection()->exec($query);
+  }
+
   public function tearDown() {
     //always remove the dataset
     $dataset = $this->_data_set;
     $this->_db_remove_rows($dataset);
     parent::tearDown();
+  }
+
+  public function dashKeys($array, $arrayHolder = array()) {
+    $dashArray = !empty($arrayHolder) ? $arrayHolder : array();
+    foreach ($array as $key => $val) {
+      $newKey = str_replace('_', '-', $key);
+      if (!is_array($val)) {
+        $dashArray[$newKey] = $val;
+      } else {
+        $dashArray[$newKey] = $this->dashKeys($val);
+      }
+    }
+    return $dashArray;
   }
 }

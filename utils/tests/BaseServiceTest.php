@@ -11,10 +11,10 @@ abstract class BaseServiceTest extends PHPUnit_Extensions_Database_TestCase {
     if (!$this->_conn) {
       if (!self::$_pdo) {
         self::$_pdo = new PDO('mysql:host=' . DB_HOST .';dbname=' .
-          DB_DATABASE , DB_USERNAME , DB_PASSWORD);
+          TEST_DB_DATABASE , DB_USERNAME , DB_PASSWORD);
       }
 
-      $this->_conn = $this->createDefaultDBConnection(self::$_pdo, DB_DATABASE);
+      $this->_conn = $this->createDefaultDBConnection(self::$_pdo, TEST_DB_DATABASE);
     }
 
     return $this->_conn;

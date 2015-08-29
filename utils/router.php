@@ -145,7 +145,9 @@ class Router Implements RouterInterface {
       'post' => $_POST
     );
 
-    if ($request['api_version'] && $request['api_version'] !== VERSION){
+    if ($request['api_version'] && $request['api_version'] === 'test'){
+    	define('TESTMODE', true);
+    } else if ($request['api_version'] && $request['api_version'] !== VERSION && $request['api_version'] !== 'test'){
       self::_send_404();
     }
 
