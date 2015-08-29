@@ -147,4 +147,17 @@ abstract class BaseEndpoint extends PHPUnit_Extensions_Database_TestCase {
     $this->_db_remove_rows($dataset);
     parent::tearDown();
   }
+  
+  public function dashKeys($array, $arrayHolder = array()) {
+    $dashArray = !empty($arrayHolder) ? $arrayHolder : array();
+    foreach ($array as $key => $val) {
+      $newKey = str_replace('_', '-', $key);
+      if (!is_array($val)) {
+        $dashArray[$newKey] = $val;
+      } else {
+        $dashArray[$newKey] = $this->dashKeys($val);
+      }
+    }
+    return $dashArray;
+  }
 }
