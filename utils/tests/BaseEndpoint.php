@@ -141,7 +141,7 @@ abstract class BaseEndpoint extends PHPUnit_Extensions_Database_TestCase {
     }
   }
 
-  public function truncate(){
+  public function truncate($table){
     $query = 'truncate`' . $table . '`;';
     $this->_conn->getConnection()->exec($query);
   }
