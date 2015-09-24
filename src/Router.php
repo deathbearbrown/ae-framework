@@ -1,7 +1,7 @@
 <?php
-namespace AEFramework;
+namespace AEUtils;
 
-use \AEFramework\JsonResHandler;
+use \AEUtils\JsonResHandler;
 
 class Router Implements RouterInterface {
 

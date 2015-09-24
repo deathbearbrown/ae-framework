@@ -1,5 +1,5 @@
 <?php
-namespace AEFramework;
+namespace AEUtils;
 
 Class JsonResHandler {
 

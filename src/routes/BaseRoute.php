@@ -1,5 +1,5 @@
 <?php
-namespace AEFramework\routes;
+namespace AEUtils\routes;
 
 use Exception;
 use UnexpectedValueException;

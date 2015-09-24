@@ -1,12 +1,12 @@
 <?php
-namespace AEFramework\test;
+namespace AEUtils\test;
 use Exception;
 
 class BaseRouteTest extends \PHPUnit_Framework_TestCase
 {
   protected function setUp()
   {
-    $this->r = new \AEFramework\routes\BaseRoute();
+    $this->r = new \AEUtils\routes\BaseRoute();
     parent::setUp();
   }
 

@@ -1,5 +1,5 @@
 <?php
-namespace AEFramework\test;
+namespace AEUtils\test;
 use PDO;
 use Exception;
 
@@ -17,7 +17,7 @@ define('TESTMODE', true);
  * - _table_name
  * - _fixture
  */
-abstract class AEFrameworkTestCase extends \PHPUnit_Extensions_Database_TestCase
+abstract class AEUtilsTestCase extends \PHPUnit_Extensions_Database_TestCase
 {
   static private $pdo = null;
   private $conn = null;

@@ -1,5 +1,5 @@
 <?php
-namespace AEFramework;
+namespace AEUtils;
 
 class Helpers {
   // add a utility function for plucking data

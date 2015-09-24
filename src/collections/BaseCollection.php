@@ -1,9 +1,9 @@
 <?php
-namespace AEFramework\collections;
+namespace AEUtils\collections;
 
-use \AEFramework\Database;
-use \AEFramework\models\BaseModel;
-use \AEFramework\Helpers;
+use \AEUtils\Database;
+use \AEUtils\models\BaseModel;
+use \AEUtils\Helpers;
 
 class BaseCollection {
 

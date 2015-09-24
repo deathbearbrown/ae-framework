@@ -1,5 +1,5 @@
 <?php
-namespace AEFramework\tests;
+namespace AEUtils\tests;
 
 use PDO;
 use Exception;
