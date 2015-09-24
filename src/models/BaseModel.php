@@ -1,8 +1,8 @@
 <?php
-namespace AEFramework\models;
+namespace AEUtils\models;
 
 use Exception;
-use \AEFramework\Database;
+use \AEUtils\Database;
 
 class BaseModel {
 

@@ -1,8 +1,8 @@
 <?php
-namespace AEFramework\routes;
+namespace AEUtils\routes;
 
-use \AEFramework\models\BaseModel;
-use \AEFramework\JsonResHandler;
+use \AEUtils\models\BaseModel;
+use \AEUtils\JsonResHandler;
 
 class BaseJsonRoute extends BaseRoute {
 

@@ -1,5 +1,5 @@
 <?php
-namespace AEFramework;
+namespace AEUtils;
 use \mysqli;
 
 class Database implements DatabaseInterface {

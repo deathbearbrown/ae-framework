@@ -1,8 +1,8 @@
 <?php
-namespace AEFramework\test;
+namespace AEUtils\test;
 use Exception;
 
-class Model extends \AEFramework\models\BaseModel {
+class Model extends \AEUtils\models\BaseModel {
   protected $_json_type = 'test json type';
   protected $_db_table = 'model_test_table';
   protected $_db_schema = array(
@@ -12,7 +12,7 @@ class Model extends \AEFramework\models\BaseModel {
     'test_attr3' => array(
       'type' => 'string',
       'default' => 'via value',
-      'defaultFunction' => '\AEFramework\test\Model::attr3DefaultFunction'
+      'defaultFunction' => '\AEUtils\test\Model::attr3DefaultFunction'
     ),
     'test_attr4' => array(
       'type' => 'bool',
@@ -31,7 +31,7 @@ class Model extends \AEFramework\models\BaseModel {
   }
 }
 
-class BaseModelTest extends AEFrameworkTestCase
+class BaseModelTest extends AEUtilsTestCase
 {
   protected $_table_name = 'model_test_table';
   protected $_fixture = array(

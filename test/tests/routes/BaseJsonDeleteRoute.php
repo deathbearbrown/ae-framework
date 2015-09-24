@@ -1,7 +1,7 @@
 <?php
-namespace AEFramework\test;
+namespace AEUtils\test;
 
-class JsonDeleteRoute extends \AEFramework\routes\BaseJsonDeleteRoute {
+class JsonDeleteRoute extends \AEUtils\routes\BaseJsonDeleteRoute {
   public function __construct()
   {
     $this->_model_object = new TestModel();
@@ -9,7 +9,7 @@ class JsonDeleteRoute extends \AEFramework\routes\BaseJsonDeleteRoute {
   }
 }
 
-class BaseJsonDeleteRouteTest extends AEFrameworkTestCase
+class BaseJsonDeleteRouteTest extends AEUtilsTestCase
 {
   protected $_table_name = 'test_table';
   protected $_fixture = array(

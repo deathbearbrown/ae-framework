@@ -1,17 +1,17 @@
 {
-  "name": "wfmu/ae-framework",
+  "name": "wfmu/ae-utils",
   "require": {
     "phpunit/dbunit": ">=1.2",
     "squizlabs/php_codesniffer": "2.*"
   },
   "autoload": {
     "psr-4": {
-      "AEFramework\\": "src/"
+      "AEUtils\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "AEFramework\\test\\": "test/"
+      "AEUtils\\test\\": "test/"
     }
   }
 }

@@ -1,7 +1,7 @@
 <?php
-namespace AEFramework\test;
+namespace AEUtils\test;
 
-class JsonPostRoute extends \AEFramework\routes\BaseJsonPostRoute {
+class JsonPostRoute extends \AEUtils\routes\BaseJsonPostRoute {
   public function __construct()
   {
     $this->_model_object = new TestModel();
@@ -9,7 +9,7 @@ class JsonPostRoute extends \AEFramework\routes\BaseJsonPostRoute {
   }
 }
 
-class BaseJsonPostRouteTest extends AEFrameworkTestCase
+class BaseJsonPostRouteTest extends AEUtilsTestCase
 {
   protected $_table_name = 'test_table';
   protected $_fixture = array(

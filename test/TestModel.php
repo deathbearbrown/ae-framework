@@ -1,7 +1,7 @@
 <?php
-namespace AEFramework\test;
+namespace AEUtils\test;
 
-class TestModel extends \AEFramework\models\BaseModel {
+class TestModel extends \AEUtils\models\BaseModel {
   protected $_json_type = 'test json type';
   protected $_db_table = 'test_table';
   protected $_db_schema = array(
