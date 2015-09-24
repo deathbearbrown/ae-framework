@@ -1,0 +1,15 @@
+<?xml version='1.0' standalone='yes'?>
+<data>
+  <record>
+    <foo>bar</foo>
+  </record>
+  <record>
+    <testing>123</testing>
+  </record>
+  <record>
+    <llamas>are cool</llamas>
+  </record>
+  <record>
+    <bocoup>is awesome</bocoup>
+  </record>
+</data>

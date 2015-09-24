@@ -6,12 +6,14 @@
   },
   "autoload": {
     "psr-4": {
-      "AEFramework\\": "src/"
+      "AEFramework\\": "src/",
+      "AEUtils\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "AEFramework\\test\\": "test/"
+      "AEFramework\\test\\": "test/",
+      "AEUtils\\test\\": "test/"
     }
   }
 }
