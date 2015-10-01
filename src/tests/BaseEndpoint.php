@@ -47,7 +47,10 @@ abstract class BaseEndpoint extends \PHPUnit_Extensions_Database_TestCase {
     );
 
     $params = array(
-      'base_url' => $this->_request_base_url
+      'base_url' => $this->_request_base_url,
+      'defaults' => array(
+        'query'  => array('testmode' => 'true')
+      )
     );
 
     $this->_guzzle = new \GuzzleHttp\Client($params);
