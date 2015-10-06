@@ -136,7 +136,13 @@ abstract class BaseEndpoint extends \PHPUnit_Extensions_Database_TestCase {
   protected function _fetch_results($url, $method, $data = null) {
     $options = array();
 
-    if ($data !== null) {
+    if (is_array($data)) {
+      if (!array_key_exists('body', $data)) {
+        $options['body'] = $data;
+      } else {
+        $options = $data;
+      }
+    } else if ($data) {
       $options['body'] = $data;
     }
 
